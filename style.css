@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-top: 0px;
+}
+
+body {
+
+  margin-top: 100px;
+  display: flex;
+  background: rgb(37, 41, 255);
+}
+
+.jogo_memoria{
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(23.333% - 5px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.frente,
+.verso {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(100, 185, 255);
+  backface-visibility: hidden;
+}
+
+button {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(38, 63, 145);
+  color: white;
+}
+
+h2 { 
+  display: block;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+h4 {
+  margin-top: 30px;
+color: white;
+padding: 10px;
+width: 50%;
+text-align: center;
+border-bottom: 1px solid #F2EDED;
+}
+
+h3 {
+  margin-top: 30px;
+}
+h1 {
+  color: white;
+  padding-bottom: 30px;
+  font-size: 3em; 
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(20, 60, 146);
+  margin-bottom: 30px;
+}

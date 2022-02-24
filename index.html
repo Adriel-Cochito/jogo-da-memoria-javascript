@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body onload="function()">
+<div id="tabuleiro"class="jogo_memoria"> <h1>Jogo da memória</h1> <h2 id="comecar"><button > Iniciar / Reiniciar</button> </h2>
+  <div id="x" data-framework="c1" class="card"></div>  <div id="x" data-framework="c2" class="card"></div>  <div id="x" data-framework="c3" class="card"></div>
+  <div id="x" data-framework="c4" class="card"></div>  <div id="x" data-framework="c5" class="card"></div>  <div id="x" data-framework="c6" class="card"></div>
+  <div id="x" data-framework="c7" class="card"></div>  <div id="x" data-framework="c8" class="card"></div>  <div id="x" data-framework="c9" class="card"></div>
+  <div id="x" data-framework="c10" class="card"></div>  <div id="x" data-framework="c11" class="card"></div>  <div id="x" data-framework="c12" class="card"></div>
+  <div id="x" data-framework="c13" class="card"></div>  <div id="x" data-framework="c14" class="card"></div>  <div id="x" data-framework="c15" class="card"></div>
+  <div id="x" data-framework="c16" class="card"></div>  <h3 id="temp"><button  > Melhor tempo:</button> </h3> <h4 id="result"></h4></div>
+<script charset="utf8"> 
+  var app = { nrComponentes:0 };
+  app.getComponente = function(nome) {
+    if (!app[nome]) {
+      app[nome] = {};
+      app[app.nrComponentes++] = nome;   }
+    return app[nome];  };
+$(document).ready(function(){
+$('h4').hide();    $('.verso').hide();    $('.frente').show();
+$('h3').click(function(){
+    $('h4').fadeToggle(1000); }); 
+$('#comecar').click(function(){
+    $('h4').fadeOut(1000); }); }); 
+</script>
+<script src="script.js" charset="utf8"></script>
+</body>
+</html>
